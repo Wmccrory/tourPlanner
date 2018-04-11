@@ -7,5 +7,7 @@ const app = express();
 app.get('/', (req, res) => {
 	res.send({Hello: 'there'});
 })
-
-app.listen(5000);
+const PORT = process.env.PORT || 5000;
+app.listen(5000, () => {
+	console.log(`Now listening on port ${PORT}`);
+});
